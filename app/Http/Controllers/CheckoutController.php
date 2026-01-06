@@ -73,7 +73,7 @@ class CheckoutController extends Controller
                 'status' => 'paid',
             ]);
 
-            //  REDUCE STOCK
+            //  reduce stock
             foreach ($order->items as $item) {
                 $product = Product::find($item->product_id);
 

@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-
-
 class CartController extends Controller
 {
     public function cart()
@@ -63,6 +61,7 @@ class CartController extends Controller
             unset($cart[$product->id]);
             session()->put('cart', $cart);
         }
+
         return back();
     }
 }

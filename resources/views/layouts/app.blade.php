@@ -20,7 +20,32 @@
 
     @yield('content')
 
+    <div id="progress" class="m-3" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer; display: none;">
+        <span id="progress-value" style="border:2px solid #6e0520; box-shadow: 0 0 5px rgba(45, 1, 75, 0.9); color:black; font-weight:bold; padding: 10px; border-radius: 50%;"><i class="bi bi-arrow-up" style="font-weight: bold; font-size: 1.2rem;"></i></span>
+    </div>
+
+    <script>
+        const progress = document.getElementById('progress');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                progress.style.display = 'block';
+            } else {
+                progress.style.display = 'none;'
+            }
+        });
+
+        progress.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    </script>
+
     @include('partials.footer')
+
+
 
 </body>
 

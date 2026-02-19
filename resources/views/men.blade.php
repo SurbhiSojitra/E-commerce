@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'clothing', 'sleep-wear']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'clothing', 'sleepwear']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/sleep-wear.jpg" class="card-img-top">
                         <div class="card-body">
@@ -61,7 +61,7 @@
         <div class="row text-center mt-4">
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'footwear', 'casual-shoes']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'footwear', 'Casual-Shoes']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/casual-shoes.webp" class="card-img-top">
                         <div class="card-body">
@@ -113,18 +113,18 @@
         <div class="row text-center mt-4">
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'beauty', 'perfumes']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'grooming', 'fragrance']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/perfume.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5>Perfumes</h5>
+                            <h5>Fragrance</h5>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'beauty', 'skin-care']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'grooming', 'skin-care']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/skincare.jpg" class="card-img-top">
                         <div class="card-body">
@@ -135,7 +135,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'beauty', 'serum-gel']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'grooming', 'serum']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/haircare.webp" class="card-img-top">
                         <div class="card-body">
@@ -146,7 +146,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'beauty', 'hair-care']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'grooming', 'hair-care']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/haircare.webp" class="card-img-top">
                         <div class="card-body">
@@ -165,7 +165,7 @@
         <div class="row text-center mt-4">
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'accesories', 'watches']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'accessories', 'watches']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/watch.avif" class="card-img-top">
                         <div class="card-body">
@@ -176,7 +176,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'accesories', 'belt']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'accessories', 'belt']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/belt.avif" class="card-img-top">
                         <div class="card-body">
@@ -187,7 +187,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'accesories', 'wallet']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'accessories', 'wallet']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/wallet.avif" class="card-img-top">
                         <div class="card-body">
@@ -198,7 +198,7 @@
             </div>
             <div class="col-md-3 mb-4">
 
-                <a href="{{ route('products.list', ['men', 'accesories', 'sunglasses']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['men', 'accessories', 'sunglasses']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/men/sunglass.jpeg" class="card-img-top">
                         <div class="card-body">

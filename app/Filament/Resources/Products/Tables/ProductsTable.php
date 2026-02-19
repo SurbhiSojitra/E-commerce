@@ -29,6 +29,7 @@ class ProductsTable
                     ->getStateUsing(fn($record) => asset('storage/' . $record->image)),
 
                 TextColumn::make('tag.name')->label('Tag')->searchable(),
+                TextColumn::make('sub_tag.name')->label('Sub Tag')->searchable(),
                 TextColumn::make('qty')->label('Quantity'),
                 TextColumn::make('sku')->label('SKU'),
                 TextColumn::make('price')->label('Price'),

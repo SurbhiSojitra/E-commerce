@@ -50,7 +50,23 @@
     color: black;
 }
 
-.category-slider {
-    overflow: hidden;
-    position: relative;
+
+.catSwiper {
+    padding-bottom: 10px;
+}
+
+.catSwiper .swiper-slide {
+    width: 250px !important;
+}
+
+.category-card {
+    transition: transform .3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.catSwiper .swiper-wrapper {
+    transition-timing-function: linear !important;
 }

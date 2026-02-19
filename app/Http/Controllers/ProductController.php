@@ -12,7 +12,20 @@ class ProductController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $womenCategory = Category::where('name', 'Women')->first();
+        $menCategory = Category::where('name', 'men')->first();
+        $kidsCategory = Category::where('name', 'kids')->first();
+        $homeKitchenCategory = Category::where('name', 'home_kitchen')->first();
+
+        $womenSubCategories = SubCategory::where('category_id', $womenCategory?->id)->latest()->get();
+
+        $menSubCategories = SubCategory::where('category_id', $menCategory?->id)->latest()->get();
+
+        $kidsSubCategories = SubCategory::where('category_id', $kidsCategory?->id)->latest()->get();
+
+        $homeKitchenSubCategories = SubCategory::where('category_id', $homeKitchenCategory?->id)->latest()->get();
+
+        return view('home', compact('womenSubCategories', 'menSubCategories', 'kidsSubCategories', 'homeKitchenSubCategories'));
     }
 
     public function women()
@@ -68,7 +81,6 @@ class ProductController extends Controller
             'subcategory'
         ));
     }
-
 
     public function men()
     {

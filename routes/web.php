@@ -5,11 +5,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-    // return redirect('/admin');
-});
-Route::get('/home', [ProductController::class, 'home'])->name('home');
+Route::get('/', [ProductController::class, 'home'])->name('home');
 
 Route::get('/products/{category}/{subcategory}/{tag}', [ProductController::class, 'productList'])->name('products.list');
 

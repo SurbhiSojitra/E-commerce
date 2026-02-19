@@ -11,6 +11,7 @@ class Product extends Model
         'category_id',
         'sub_category_id',
         'tag_id',
+        'sub_tag_id',
         'sku',
         'qty',
         'image',
@@ -30,7 +31,10 @@ class Product extends Model
         return $this->belongsTo(Tag::class);
     }
 
-    
+    public function sub_tag()
+    {
+        return $this->belongsTo(SubTag::class);
+    }
 
     public function getImageUrlAttribute()
     {

@@ -1,27 +1,22 @@
 <?php
 
-namespace App\Filament\Resources\SubCategories\Tables;
+namespace App\Filament\Resources\SubTags\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class SubCategoriesTable
+class SubTagsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
                 TextColumn::make('id')->sortable(),
-                TextColumn::make('category.name')->label('Category'),
+                TextColumn::make('tag.name')->label('Tag'),
                 TextColumn::make('name')->label('Name')->searchable(),
-                 ImageColumn::make('image')
-                    ->height(60)
-                    ->width(60)
-                    ->getStateUsing(fn($record) => asset('storage/' . $record->image)),
             ])
             ->filters([
                 //

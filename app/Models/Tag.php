@@ -12,4 +12,9 @@ class Tag extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function subTags()
+    {
+        return $this->hasMany(SubTag::class);
+    }
 }

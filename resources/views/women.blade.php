@@ -3,14 +3,6 @@
 @section('title', 'Home')
 
 @section('content')
-<section class="hero-section">
-    <div class="container-fluid p-0">
-        <div class="bg-image">
-            <img src="assets/img/women-bg.jpg" alt="Background Image" class="img-fluid">
-        </div>
-    </div>
-</section>
-
 
 <section class="women-category">
     <div class="container my-5">
@@ -47,7 +39,7 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['women', 'clothing', 'sleep-wear']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['women', 'clothing', 'sleepwear']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/women/sleepwear.webp" class="card-img-top">
                         <div class="card-body">

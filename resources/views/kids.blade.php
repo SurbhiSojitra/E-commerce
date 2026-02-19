@@ -40,7 +40,7 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['kids', 'clothing', 'sleep-wear']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['kids', 'clothing', 'sleepwear']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/kids/sleep.jpg" class="card-img-top">
                         <div class="card-body">
@@ -58,7 +58,7 @@
         <h1>Trending In Footwear</h1>
         <div class="row text-center mt-4">
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['kids', 'clothing', 'casual-shoes']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['kids', 'footwear', 'casual-shoes']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/kids/shoes.jpg" class="card-img-top">
                         <div class="card-body">
@@ -68,7 +68,7 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['kids', 'clothing', 'sandals']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['kids', 'footwear', 'sandals']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/kids/sandal.jpg" class="card-img-top">
                         <div class="card-body">
@@ -78,7 +78,7 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['kids', 'clothing', 'crocks']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['kids', 'footwear', 'crocks']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/kids/croks.webp" class="card-img-top">
                         <div class="card-body">
@@ -88,7 +88,7 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['kids', 'clothing', 'boots']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['kids', 'footwear', 'boots']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/kids/boots.jpg" class="card-img-top">
                         <div class="card-body">

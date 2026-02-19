@@ -55,46 +55,21 @@
 <section class="content-category">
     <div class="container my-5">
         <h1>Trending In Women Style</h1>
-        <div class="row text-center mt-4">
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['women', 'clothing']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/women/western-dress.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Clothing</h5>
+        <div class="swiper catSwiper mt-4">
+            <div class="swiper-wrapper">
+                @foreach($womenSubCategories as $sub)
+                <div class="swiper-slide">
+                    <a href="{{ route('products.bySubCategory', ['women', Str::slug($sub->name)]) }}"
+                        class="text-decoration-none text-dark">
+                        <div class="card category-card">
+                            <img src="{{ asset('storage/'.$sub->image) }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5>{{ $sub->name }}</h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['women', 'beauty']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/women/cosmetics.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Beauty</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['women', 'footwear']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/women/shoes.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Footwear</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['women', 'accessories']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/women/beauty.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Accesories</h5>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -103,46 +78,20 @@
 <section class="content-category">
     <div class="container my-5">
         <h1>Trending In Men Style</h1>
-        <div class="row text-center mt-4">
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['men', 'clothing']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/men/men-clothing.png" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Clothing</h5>
+        <div class="swiper catSwiper mt-4">
+            <div class="swiper-wrapper">
+                @foreach($menSubCategories as $sub)
+                <div class="swiper-slide">
+                    <a href="{{ route('products.bySubCategory', ['men', Str::slug($sub->name)]) }}" class="text-decoration-none text-dark">
+                        <div class="card category-card">
+                            <img src="{{ asset('storage/'.$sub->image) }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5>{{ $sub->name }}</h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['men', 'grooming']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/men/men-cosmetics.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Grooming</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['men', 'footwear']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/men/men-shoes.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Footwear</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 mb-4">
-                <a href="{{ route('products.bySubCategory', ['men', 'accesories']) }}" class="text-decoration-none text-dark">
-                    <div class="card category-card">
-                        <img src="assets/img/men/men-accessories.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5>Accesories</h5>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -151,38 +100,20 @@
 <section class="content-category">
     <div class="container my-5">
         <h1>Trending In Kids Style</h1>
-        <div class="row text-center mt-4">
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/kids/kids-cloth.avif" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Clothing</h5>
-                    </div>
+        <div class="swiper catSwiper mt-4">
+            <div class="swiper-wrapper">
+                @foreach($kidsSubCategories as $sub)
+                <div class="swiper-slide">
+                    <a href="{{ route('products.bySubCategory', ['kids', Str::slug($sub->name)]) }}" class="text-decoration-none text-dark">
+                        <div class="card category-card">
+                            <img src="{{ asset('storage/'.$sub->image) }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5>{{ $sub->name }}</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/kids/kids-cosmetic.webp" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Beauty</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/kids/kids-shoes.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Footwear</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/kids/kids-accessories.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Accesories</h5>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -191,42 +122,66 @@
 <section class="content-category">
     <div class="container my-5">
         <h1>Trending In Home & Kitchen</h1>
-        <div class="row text-center mt-4">
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/home/emaarcamel.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Home Decor</h5>
-                    </div>
+        <div class="swiper catSwiper mt-4">
+            <div class="swiper-wrapper">
+                @foreach($homeKitchenSubCategories as $sub)
+                <div class="swiper-slide">
+                    <a href="{{ route('products.bySubCategory', ['home_kitchen', Str::slug($sub->name)]) }}" class="text-decoration-none text-dark">
+                        <div class="card category-card">
+                            <img src="{{ asset('storage/'.$sub->image) }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5>{{ $sub->name }}</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/home/ceiling-light.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Lamps & Lightings</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/home/kitchen.avif" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Kitchen & Table</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card category-card">
-                    <img src="assets/img/home/organiser.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Storage</h5>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
 
+<script>
+    let catSwiperInstance;
+
+    function initCatSwiper() {
+        const el = document.querySelector(".catSwiper");
+        if (!el) return;
+
+        catSwiperInstance = new Swiper(".catSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            loop: true,
+
+            speed: 8000,
+
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            allowTouchMove: true,
+            grabCursor: true,
+
+            watchSlidesProgress: true,
+
+            loopAdditionalSlides: 50,
+            loopedSlides: 50,
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", initCatSwiper);
+
+    window.addEventListener("pageshow", function(event) {
+        if (event.persisted && catSwiperInstance) {
+            catSwiperInstance.autoplay.start();
+            catSwiperInstance.update();
+        }
+    });
+</script>
 
 @endsection

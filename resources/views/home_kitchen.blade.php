@@ -29,11 +29,11 @@
                 </a>
             </div>
             <div class="col-md-3 mb-4">
-                <a href="{{ route('products.list', ['home_kitchen', 'home-decor', 'clocks']) }}" class="text-decoration-none text-dark">
+                <a href="{{ route('products.list', ['home_kitchen', 'home-decor', 'watches']) }}" class="text-decoration-none text-dark">
                     <div class="card category-card">
                         <img src="assets/img/home/clock.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5>Clocks</h5>
+                            <h5>Watches</h5>
                         </div>
                     </div>
                 </a>

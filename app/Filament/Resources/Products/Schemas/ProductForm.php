@@ -3,6 +3,8 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use App\Models\Category;
+use App\Models\SubCategory;
+use App\Models\SubTag;
 use App\Models\Tag;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
@@ -20,16 +22,40 @@ class ProductForm
                 Select::make('category_id')
                     ->label('Category')
                     ->relationship('category', 'name')
-                    ->required(),
+                    ->required()
+                    ->reactive()
+                    ->afterStateUpdated(fn(callable $set, $state) => $set('sub_category_id', null)),
                 Select::make('sub_category_id')
                     ->label('Sub Category')
-                    ->relationship('sub_category', 'name')
+                    ->options(function (callable $get) {
+
+                        return SubCategory::query()
+                            ->where('category_id', $get('category_id'))
+                            ->pluck('name', 'id');
+                    })
+                    ->disabled(fn($get) => !$get('category_id'))
+                    ->searchable()
                     ->required(),
+
                 Select::make('tag_id')
                     ->label('Tag')
                     ->options(Tag::pluck('name', 'id'))
                     ->searchable()
+                    ->required()->reactive()
+                    ->afterStateUpdated(fn(callable $set, $state) => $set('sub_tag_id', null)),
+
+                Select::make('sub_tag_id')
+                    ->label('Sub Tag')
+                    ->options(function (callable $get) {
+
+                        return SubTag::query()
+                            ->where('tag_id', $get('tag_id'))
+                            ->pluck('name', 'id');
+                    })
+                    ->disabled(fn($get) => !$get('tag_id'))
+                    ->searchable()
                     ->required(),
+
                 TextInput::make('sku')
                     ->label('SKU')
                     ->unique(ignoreRecord: true)

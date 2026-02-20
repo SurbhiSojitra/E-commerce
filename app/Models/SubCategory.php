@@ -8,7 +8,6 @@ class SubCategory extends Model
 {
     protected $fillable = ['category_id', 'name', 'image'];
 
-
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -22,5 +21,10 @@ class SubCategory extends Model
     public function getImageUrlAttribute()
     {
         return $this->image ? asset('storage/' . $this->image) : null;
+    }
+
+    public function tags()
+    {
+        return $this->hasMany(Tag::class);
     }
 }

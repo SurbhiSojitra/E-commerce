@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'home'])->name('home');
 
-Route::get('/products/{category}/{subcategory}/{tag}', [ProductController::class, 'productList'])->name('products.list');
+Route::get('/products/{category}/{subcategory}/{tag?}', [ProductController::class, 'productList'])->name('products.list');
 
 Route::get('/products/{category}/{subcategory}', [ProductController::class, 'productListBySubCategory'])->name('products.bySubCategory');
 

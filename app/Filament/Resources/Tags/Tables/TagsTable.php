@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Tags\Tables;
 
+use Dom\Text;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -15,6 +16,16 @@ class TagsTable
         return $table
             ->columns([
                 TextColumn::make('id')->sortable(),
+
+                TextColumn::make('subCategory.name')
+                    ->label('Sub Category')
+                    ->formatStateUsing(
+                        fn($record) =>
+                        $record->subCategory->category->name . ' → ' . $record->subCategory->name
+                    )
+                    ->badge()
+                    ->searchable(),
+
                 TextColumn::make('name')->searchable(),
             ])
             ->filters([

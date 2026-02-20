@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'sub_category_id'];
 
     public function products()
     {
@@ -16,5 +16,15 @@ class Tag extends Model
     public function subTags()
     {
         return $this->hasMany(SubTag::class);
+    }
+
+    public function subCategory()
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

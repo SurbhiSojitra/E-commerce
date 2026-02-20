@@ -12,4 +12,9 @@ class SubTag extends Model
     {
         return $this->belongsTo(Tag::class);
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

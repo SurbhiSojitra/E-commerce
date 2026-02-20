@@ -2,11 +2,67 @@
 @section('title', 'product_list')
 @section('content')
 <div class="row">
-    <div class="col-md-3 mt-3 px-4">
+    <!-- <div class="col-md-3 mt-3 px-4">
         <div class="filters px-4 d-flex justify-content-between align-items-center">
             <h4>Filters</h4>
-            <h6 class="text-danger">Clear All</h6>
+            <a href="#" class="text-danger text-decoration-none">
+                Clear All
+            </a>
         </div>
+        <hr>
+    </div> -->
+
+    <div class="col-md-3 mt-3 px-4">
+
+        <form method="GET" id="filterForm">
+
+            <div class="filters px-2 d-flex justify-content-between align-items-center">
+                <h4>Filters</h4>
+                <a href="{{ url()->current() }}" class="text-danger text-decoration-none">
+                    Clear All
+                </a>
+            </div>
+
+            <hr>
+
+            {{-- ✅ TAG FILTER --}}
+            @if(isset($tags) && $tags->count())
+            <h5 class="mt-3">Tags</h5>
+
+            @foreach($tags as $tagItem)
+            <div class="form-check">
+                <input
+                    class="form-check-input filter-checkbox"
+                    type="checkbox"
+                    name="tags[]"
+                    value="{{ $tagItem->id }}"
+                    {{ in_array($tagItem->id, request('tags', [])) ? 'checked' : '' }}>
+                <label class="form-check-label">
+                    {{ $tagItem->name }}
+                </label>
+            </div>
+            @endforeach
+            <hr>
+            @endif
+            {{-- ✅ SUB TAG FILTER --}}
+            @if(isset($subTags) && $subTags->count())
+            <h5 class="mt-3">Sub Tags</h5>
+
+            @foreach($subTags as $subTag)
+            <div class="form-check">
+                <input
+                    class="form-check-input filter-checkbox"
+                    type="checkbox"
+                    name="subtags[]"
+                    value="{{ $subTag->id }}"
+                    {{ in_array($subTag->id, request('subtags', [])) ? 'checked' : '' }}>
+                <label class="form-check-label">
+                    {{ $subTag->name }}
+                </label>
+            </div>
+            @endforeach
+            @endif
+        </form>
     </div>
 
     <div class="col-md-9">
@@ -65,4 +121,12 @@
         </section>
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('.filter-checkbox').forEach(cb => {
+        cb.addEventListener('change', function() {
+            document.getElementById('filterForm').submit();
+        });
+    });
+</script>
 @endsection

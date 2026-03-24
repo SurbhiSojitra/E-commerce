@@ -71,9 +71,9 @@
                 <h2 class="mb-4">
                     {{ $category->name }} →
                     {{ $subcategory->name }}
-                    @isset($tag)
+                    <!-- @isset($tag)
                     → {{ ucfirst($tag->name) }}
-                    @endisset
+                    @endisset -->
                 </h2>
                 <div class="row text-center mt-4">
                     @forelse($products as $product)
